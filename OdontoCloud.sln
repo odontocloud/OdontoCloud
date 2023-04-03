@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud", "OdontoCloud.csproj", "{E0B49251-0137-47CD-A133-89E5DFD11A0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.API", "OdontoCloud.API.csproj", "{E0B49251-0137-47CD-A133-89E5DFD11A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.Domain", "..\OdontoCloud.Domain\OdontoCloud.Domain.csproj", "{F3ACA590-3D48-4151-9C9E-02CAB010E768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.Infrastructure", "..\OdontoCloud.InfraStructure\OdontoCloud.Infrastructure.csproj", "{74CBE152-095A-4A9C-AA71-E7F26DA3C22F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{E0B49251-0137-47CD-A133-89E5DFD11A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B49251-0137-47CD-A133-89E5DFD11A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0B49251-0137-47CD-A133-89E5DFD11A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3ACA590-3D48-4151-9C9E-02CAB010E768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3ACA590-3D48-4151-9C9E-02CAB010E768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3ACA590-3D48-4151-9C9E-02CAB010E768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3ACA590-3D48-4151-9C9E-02CAB010E768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CBE152-095A-4A9C-AA71-E7F26DA3C22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CBE152-095A-4A9C-AA71-E7F26DA3C22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CBE152-095A-4A9C-AA71-E7F26DA3C22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CBE152-095A-4A9C-AA71-E7F26DA3C22F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
