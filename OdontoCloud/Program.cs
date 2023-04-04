@@ -22,6 +22,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-Console.WriteLine("teste12");
-
 app.Run();

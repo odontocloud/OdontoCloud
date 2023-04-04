@@ -1,8 +1,5 @@
 ﻿namespace OdontoCloud.Domain
 {
-    public interface Cliente
+    public class Class1
     {
-        //public int Id { get; set; }
-
-    }
 }
