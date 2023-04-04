@@ -3,6 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.API", "OdontoCloud\OdontoCloud.API.csproj", "{E9F79966-3D51-46A8-AD82-1546F4525F81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.Domain", "OdontoCloud.Domain\OdontoCloud.Domain.csproj", "{B28CFA15-A0C4-4C09-8C35-49E6CA1C9AE4}"
