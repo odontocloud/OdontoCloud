@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj": {}
+    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj": {
+    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
+        "projectUniqueName": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
         "projectName": "OdontoCloud.API",
-        "projectPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
+        "projectPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
         "packagesPath": "C:\\Users\\duzan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\obj\\",
+        "outputPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\duzan\\AppData\\Roaming\\NuGet\\NuGet.Config",

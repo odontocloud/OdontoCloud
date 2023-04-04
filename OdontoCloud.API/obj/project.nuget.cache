@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "adjbWt8vGe7dBEC3dlTTADWwUMKDx+FenCAU7tvYkgb7m0/gxywWJX+gK7iVB2LpoOGjO3P8DwCwMe6zHjTQhw==",
+  "dgSpecHash": "4tk/ifnE0fTV1UmCX5eOzmtGAZhJYHGcVZZuhh+xPi0X7TfCJOMKXB0rmhxe52rnlJIHFSlQmvvDAQfiTveJyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
+  "projectFilePath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
