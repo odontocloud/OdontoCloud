@@ -548,19 +548,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danil\\.nuget\\packages\\": {}
+    "C:\\Users\\duzan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danil\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
+      "projectUniqueName": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
       "projectName": "OdontoCloud.API",
-      "projectPath": "C:\\Users\\danil\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
-      "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danil\\source\\repos\\OdontoCloud\\OdontoCloud\\obj\\",
+      "projectPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\OdontoCloud.API.csproj",
+      "packagesPath": "C:\\Users\\duzan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\duzan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -618,7 +618,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
