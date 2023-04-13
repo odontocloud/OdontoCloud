@@ -18,5 +18,14 @@ namespace OdontoCloud.Infrastructure.Context
             optionsBuilder.UseSqlServer("Server=tcp:odontocloud.database.windows.net,1433;Initial Catalog=OdontoCloud;Persist Security Info=False;User ID=odontocloud@hotmail.com@odontocloud;Password=Od0nt0cl0ud;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Anamnese>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("Anamnese_PK");
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
+
+        }
     }
 }
