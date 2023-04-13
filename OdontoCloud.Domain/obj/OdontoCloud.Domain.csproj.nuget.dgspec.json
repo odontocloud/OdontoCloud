@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {}
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
         "projectName": "OdontoCloud.Domain",
-        "projectPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
-        "packagesPath": "C:\\Users\\duzan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Domain\\obj\\",
+        "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\duzan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
