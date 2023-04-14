@@ -8,9 +8,9 @@ namespace OdontoCloud.Domain.Entities
 {
     public class Anamnese
     {
-        public Anamnese(int? id, int idCliente, bool doencaCardiovascular, string? descricaoDoencaCardiovascular, bool hipertencao, bool diabetes, bool doencaRespiratoria, bool doencaHepatica, bool osteoporose, bool coagulacaoSangramento, bool problemaGastrico, bool hepatite, bool tratamentoMedico, string? descricaoTratamentoMedico, bool alergia, string? descricaoAlergia, bool fumante, bool gravida, bool gravidaAmamentando, bool restricaoMedicamento, string? descricaoRestricaoMedicamento, bool medicamentoUso, bool problemaAnestesia)
+        public Anamnese() { }
+        public Anamnese(int idCliente, bool doencaCardiovascular, string descricaoDoencaCardiovascular, bool hipertencao, bool diabetes, bool doencaRespiratoria, bool doencaHepatica, bool osteoporose, bool coagulacaoSangramento, bool problemaGastrico, bool hepatite, bool tratamentoMedico, string descricaoTratamentoMedico, bool alergia, string descricaoAlergia, bool fumante, bool gravida, bool gravidaAmamentando, bool restricaoMedicamento, string descricaoRestricaoMedicamento, bool medicamentoUso, bool problemaAnestesia)
         {
-            Id = id;
             IdCliente = idCliente;
             DoencaCardiovascular = doencaCardiovascular;
             DescricaoDoencaCardiovascular = descricaoDoencaCardiovascular;
@@ -35,28 +35,28 @@ namespace OdontoCloud.Domain.Entities
             ProblemaAnestesia = problemaAnestesia;
         }
 
-        public int? Id { get; private set; }
-        public int IdCliente { get; private  set; }
-        public bool DoencaCardiovascular { get; private set; }
-        public string? DescricaoDoencaCardiovascular { get; private set; }
-        public bool Hipertencao { get; private set; }
-        public bool Diabetes { get; private set; }
-        public bool DoencaRespiratoria { get; private set; }
-        public bool DoencaHepatica { get; private set; }
-        public bool Osteoporose { get; private set; }
-        public bool CoagulacaoSangramento { get; private set; }
-        public bool ProblemaGastrico { get; private set; }
-        public bool Hepatite { get; private set; }
-        public bool TratamentoMedico { get; private set; }
-        public string? DescricaoTratamentoMedico { get; private set; }
-        public bool Alergia { get; private set; }
-        public string? DescricaoAlergia { get; private set; }
-        public bool Fumante { get; private set; }
-        public bool Gravida { get; private set; }
-        public bool GravidaAmamentando { get; private set; }
-        public bool RestricaoMedicamento { get; private set; }
-        public string? DescricaoRestricaoMedicamento { get; private set; }
-        public bool MedicamentoUso { get; private set; }
-        public bool ProblemaAnestesia { get; private set; }
+        public int Id { get; set; }
+        public int IdCliente { get; set; }
+        public bool DoencaCardiovascular { get; set; }
+        public string? DescricaoDoencaCardiovascular { get; set; }
+        public bool Hipertencao { get; set; }
+        public bool Diabetes { get; set; }
+        public bool DoencaRespiratoria { get; set; }
+        public bool DoencaHepatica { get; set; }
+        public bool Osteoporose { get; set; }
+        public bool CoagulacaoSangramento { get; set; }
+        public bool ProblemaGastrico { get; set; }
+        public bool Hepatite { get; set; }
+        public bool TratamentoMedico { get; set; }
+        public string? DescricaoTratamentoMedico { get; set; }
+        public bool Alergia { get; set; }
+        public string? DescricaoAlergia { get; set; }
+        public bool Fumante { get; set; }
+        public bool Gravida { get; set; }
+        public bool GravidaAmamentando { get; set; }
+        public bool RestricaoMedicamento { get; set; }
+        public string? DescricaoRestricaoMedicamento { get; set; }
+        public bool MedicamentoUso { get; set; }
+        public bool ProblemaAnestesia { get; set; }
     }
 }

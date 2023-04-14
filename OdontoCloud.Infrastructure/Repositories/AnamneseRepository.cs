@@ -1,4 +1,5 @@
-﻿using OdontoCloud.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using OdontoCloud.Domain.Entities;
 using OdontoCloud.Domain.Repositories;
 using OdontoCloud.Infrastructure.Context;
 using System;
@@ -18,26 +19,34 @@ namespace OdontoCloud.Infrastructure.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Anamnese Add(Anamnese obj)
+        public int Count()
+        {
+            return _context.Anamnese.Count();
+        }
+
+        public void DeleteById(int id)
+        {
+            Anamnese find = _context.Anamnese.Where(a => a.Id == id).First();
+            _context.Anamnese.Remove(find);
+            _context.SaveChanges();
+        }
+
+        public List<Anamnese> FindAll()
+        {
+            return _context.Anamnese.ToList();
+        }
+
+        public Anamnese? FindById(int id)
+        {
+            return _context.Anamnese.Find(id);
+        }
+
+        public Anamnese Save(Anamnese obj)
         {
             var result = _context.Anamnese.Add(obj).Entity;
             _context.SaveChanges();
             return result;
         }
 
-        public Anamnese deleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Anamnese> findAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Anamnese findById(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -9,9 +9,10 @@ namespace OdontoCloud.Domain.Repositories
 {
     public interface IRepository<T>
     {
-        T Add(T obj);
-        T findById(int id);
-        List<T> findAll();
-        T deleteById(int id);
+        T Save(T entity);
+        T? FindById(int id);
+        List<T> FindAll();
+        void DeleteById(int id);
+        int Count();
     }
 }
