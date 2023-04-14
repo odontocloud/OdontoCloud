@@ -59,6 +59,4 @@ namespace OdontoCloud.Domain.Entities
         public bool MedicamentoUso { get; private set; }
         public bool ProblemaAnestesia { get; private set; }
     }
-
-
 }

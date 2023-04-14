@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdontoCloud.Domain", "Odont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdontoCloud.API", "OdontoCloud.API\OdontoCloud.API.csproj", "{54F191A5-7367-4327-BE30-EFCA7857EA13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.Infrastructure", "OdontoCloud.Infrastructure\OdontoCloud.Infrastructure.csproj", "{C8CA5992-D141-467B-9C50-A2FFCDB9F7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdontoCloud.Infrastructure", "OdontoCloud.Infrastructure\OdontoCloud.Infrastructure.csproj", "{C8CA5992-D141-467B-9C50-A2FFCDB9F7C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoCloud.InfrastructureTests", "OdontoCloud.InfrastructureTests\OdontoCloud.InfrastructureTests.csproj", "{71BBA2A0-ED5F-4D80-85D1-65D1DB315D79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C8CA5992-D141-467B-9C50-A2FFCDB9F7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8CA5992-D141-467B-9C50-A2FFCDB9F7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8CA5992-D141-467B-9C50-A2FFCDB9F7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BBA2A0-ED5F-4D80-85D1-65D1DB315D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BBA2A0-ED5F-4D80-85D1-65D1DB315D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BBA2A0-ED5F-4D80-85D1-65D1DB315D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BBA2A0-ED5F-4D80-85D1-65D1DB315D79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
