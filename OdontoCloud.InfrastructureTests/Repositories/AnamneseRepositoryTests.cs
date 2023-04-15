@@ -76,10 +76,26 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
 
             //Act
             var id = repository.Save(new Anamnese() { DescricaoAlergia = "Alergia do lobão" }).Id;
-            Anamnese anamneseList = repository.FindById(id);
+            Anamnese anamnese = repository.FindById(id);
 
             //Assert
-            Assert.True(anamneseList.DescricaoAlergia == "Alergia do lobão");
+            Assert.True(anamnese.DescricaoAlergia == "Alergia do lobão");
+        }
+
+        [Fact]
+        public void Update()
+        {
+            //Arrange
+            var repository = new AnamneseRepository(OdontoCloudUtil.GetDbContextInMemory());
+
+            //Act
+            var id = repository.Save(new Anamnese() { DescricaoAlergia = "Alergia do lobão" }).Id;
+            Anamnese anamnese = repository.FindById(id);
+            anamnese.DescricaoAlergia = "Alterei a descrição";
+            repository.Update(anamnese);
+
+            //Assert
+            Assert.True(repository.FindById(id).DescricaoAlergia == "Alterei a descrição");
         }
     }
 }

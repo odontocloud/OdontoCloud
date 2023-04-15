@@ -41,12 +41,17 @@ namespace OdontoCloud.Infrastructure.Repositories
             return _context.Anamnese.Find(id);
         }
 
-        public Anamnese Save(Anamnese obj)
+        public Anamnese Save(Anamnese entity)
         {
-            var result = _context.Anamnese.Add(obj).Entity;
+            var result = _context.Anamnese.Add(entity).Entity;
             _context.SaveChanges();
             return result;
         }
 
+        public void Update(Anamnese entity)
+        {
+            _context.Anamnese.Update(entity);
+            _context.SaveChanges();
+        }
     }
 }
