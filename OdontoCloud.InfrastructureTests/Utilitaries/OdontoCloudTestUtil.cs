@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OdontoCloud.InfrastructureTests.Utilitaries
 {
-    public class OdontoCloudUtil
+    public class OdontoCloudTestUtil
     {
         public static OdontoCloudDBContext GetDbContextInMemory()
         {
