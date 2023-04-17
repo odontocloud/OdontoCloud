@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {}
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
+        "projectUniqueName": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
         "projectName": "OdontoCloud.API",
-        "projectPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
-        "packagesPath": "C:\\Users\\duzan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.API\\obj\\",
+        "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.API\\OdontoCloud.API.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\duzan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +27,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -43,6 +47,12 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -72,7 +82,145 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
+        "projectName": "OdontoCloud.Domain",
+        "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj",
+        "projectName": "OdontoCloud.Infrastructure",
+        "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj": {
+                "projectPath": "C:\\Users\\danil\\Documents\\Projetos\\OdontoCloud\\OdontoCloud.Domain\\OdontoCloud.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
