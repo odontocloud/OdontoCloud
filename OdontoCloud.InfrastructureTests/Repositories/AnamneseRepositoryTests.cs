@@ -7,7 +7,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
     public class AnamneseRepositoryTests
     {
         [Fact]
-        public void AddTest()
+        public void TestAdd()
         {
             //Arrange
             var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
@@ -20,24 +20,24 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             Assert.True(anamneseResult.Id == 1);
         }
 
-        
         [Fact]
-        public void Count()
+        public void TestUpdate()
         {
             //Arrange
             var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
 
             //Act
-            repository.Save(new Anamnese());
-            repository.Save(new Anamnese());
-            var count = repository.Count();
+            var id = repository.Save(new Anamnese() { DescricaoAlergia = "Alergia do lobão" }).Id;
+            Anamnese anamnese = repository.FindById(id);
+            anamnese.DescricaoAlergia = "Alterei a descrição";
+            repository.Update(anamnese);
 
             //Assert
-            Assert.True(count == 2);
+            Assert.True(repository.FindById(id).DescricaoAlergia == "Alterei a descrição");
         }
 
         [Fact]
-        public void DeleteById()
+        public void TestDeleteById()
         {
             //Arrange
             var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
@@ -53,7 +53,22 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         }
 
         [Fact]
-        public void FindAll()
+        public void TestCount()
+        {
+            //Arrange
+            var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+
+            //Act
+            repository.Save(new Anamnese());
+            repository.Save(new Anamnese());
+            var count = repository.Count();
+
+            //Assert
+            Assert.True(count == 2);
+        }
+
+        [Fact]
+        public void TestFindAll()
         {
             //Arrange
             var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
@@ -69,7 +84,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         }
 
         [Fact]
-        public void FindById()
+        public void TestFindById()
         {
             //Arrange
             var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
@@ -80,22 +95,6 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
 
             //Assert
             Assert.True(anamnese.DescricaoAlergia == "Alergia do lobão");
-        }
-
-        [Fact]
-        public void Update()
-        {
-            //Arrange
-            var repository = new AnamneseRepository(OdontoCloudTestUtil.GetDbContextInMemory());
-
-            //Act
-            var id = repository.Save(new Anamnese() { DescricaoAlergia = "Alergia do lobão" }).Id;
-            Anamnese anamnese = repository.FindById(id);
-            anamnese.DescricaoAlergia = "Alterei a descrição";
-            repository.Update(anamnese);
-
-            //Assert
-            Assert.True(repository.FindById(id).DescricaoAlergia == "Alterei a descrição");
         }
     }
 }
