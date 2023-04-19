@@ -27,3 +27,8 @@ C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Infrastructure\obj\Deb
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Infrastructure\obj\Debug\net7.0\ref\OdontoCloud.Infrastructure.dll
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Infrastructure\bin\Debug\net7.0\OdontoCloud.Infrastructure.runtimeconfig.json
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Infrastructure\obj\Debug\net7.0\OdontoCloud.Infrastructure.genruntimeconfig.cache
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Infrastructure\bin\Debug\net7.0\OdontoCloud.Infrastructure.runtimeconfig.json
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Infrastructure\bin\Debug\net7.0\OdontoCloud.Domain.dll
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Infrastructure\bin\Debug\net7.0\OdontoCloud.Domain.pdb
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Infrastructure\obj\Debug\net7.0\OdontoCloud.Infrastructure.csproj.CopyComplete
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Infrastructure\obj\Debug\net7.0\OdontoCloud.Infrastructure.genruntimeconfig.cache

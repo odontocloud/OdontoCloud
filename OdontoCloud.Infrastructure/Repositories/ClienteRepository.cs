@@ -4,47 +4,47 @@ using OdontoCloud.Infrastructure.Context;
 
 namespace OdontoCloud.Infrastructure.Repositories
 {
-    public class AnamneseRepository : IRepository<Anamnese>
+    public class ClienteRepository : IRepository<Cliente>
     {
         private readonly OdontoCloudDBContext _context;
 
-        public AnamneseRepository(OdontoCloudDBContext context)
+        public ClienteRepository(OdontoCloudDBContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public int Count()
         {
-            return _context.Anamnese.Count();
+            return _context.Cliente.Count();
         }
 
         public void DeleteById(int id)
         {
-            Anamnese find = _context.Anamnese.Where(a => a.Id == id).First();
-            _context.Anamnese.Remove(find);
+            Cliente find = _context.Cliente.Where(a => a.Id == id).First();
+            _context.Cliente.Remove(find);
             _context.SaveChanges();
         }
 
-        public List<Anamnese> FindAll()
+        public List<Cliente> FindAll()
         {
-            return _context.Anamnese.ToList();
+            return _context.Cliente.ToList();
         }
 
-        public Anamnese? FindById(int id)
+        public Cliente? FindById(int id)
         {
-            return _context.Anamnese.Find(id);
+            return _context.Cliente.Find(id);
         }
 
-        public Anamnese Save(Anamnese entity)
+        public Cliente Save(Cliente entity)
         {
-            var result = _context.Anamnese.Add(entity).Entity;
+            var result = _context.Cliente.Add(entity).Entity;
             _context.SaveChanges();
             return result;
         }
 
-        public void Update(Anamnese entity)
+        public void Update(Cliente entity)
         {
-            _context.Anamnese.Update(entity);
+            _context.Cliente.Update(entity);
             _context.SaveChanges();
         }
     }

@@ -24,3 +24,5 @@ C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Debug\net7.
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Debug\net7.0\ref\OdontoCloud.Domain.dll
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\bin\Debug\net7.0\OdontoCloud.Domain.runtimeconfig.json
 C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Debug\net7.0\OdontoCloud.Domain.genruntimeconfig.cache
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Domain\bin\Debug\net7.0\OdontoCloud.Domain.runtimeconfig.json
+C:\Users\duzan\source\repos\OdontoCloud\OdontoCloud.Domain\obj\Debug\net7.0\OdontoCloud.Domain.genruntimeconfig.cache
