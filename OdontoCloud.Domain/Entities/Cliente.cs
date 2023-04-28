@@ -2,7 +2,6 @@
 {
     public class Cliente : Pessoa
     {
-
         public Cliente() { }  
         public string? TelCelular { get; set; }
         public string? TelResidencial { get; set; }

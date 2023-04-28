@@ -8,6 +8,7 @@ namespace OdontoCloud.Infrastructure.Context
         public OdontoCloudDBContext(DbContextOptions<OdontoCloudDBContext> options): base(options) { }
         public DbSet<Anamnese> Anamnese { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +31,11 @@ namespace OdontoCloud.Infrastructure.Context
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
 
+            modelBuilder.Entity<Endereco>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("Endereco_PK");
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
         }
     }
 }
