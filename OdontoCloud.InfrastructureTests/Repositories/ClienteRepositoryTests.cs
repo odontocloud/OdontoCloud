@@ -10,14 +10,22 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         {
             CPF = "12345678910",
             RG = "12354646",
-            Nome = "Paulin Pinho"
-        };
+            Nome = "Paulin Pinho",
+            DataNascimento = new DateTime(1995, 07, 08),
+            EstadoCivil = EstadoCivilEnum.Solteiro.ToString(),
+            Profissao = "Engenheiro",
+            TelCelular = "(18) 999996662",
+            TelResidencial = "(18) 36225987",
+            IndicadoPor = "Danilin",
+            DNLE = "Não sei o que é",
+       };
 
         Cliente clienteDanilin = new Cliente
         {
             CPF = "98765432110",
             RG = "87464842",
-            Nome = "Danilin"
+            Nome = "Danilin",
+            DataNascimento = new DateTime(1992, 11, 18)
         };
 
         [Fact]
@@ -107,6 +115,24 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
 
             //Assert
             Assert.True(clienteFindAll.Nome == "Paulin Pinho");
+        }
+
+        [Fact]
+        public void TestNullableFields()
+        {
+            //Arrange
+            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+
+            //Act
+            var id = repository.Save(clientePaulinPinho).Id;
+
+            //Assert
+            Assert.True(repository.FindById(id).EstadoCivil == "Solteiro");
+            Assert.True(repository.FindById(id).Profissao == "Engenheiro");
+            Assert.True(repository.FindById(id).TelCelular == "(18) 999996662");
+            Assert.True(repository.FindById(id).TelResidencial == "(18) 36225987");
+            Assert.True(repository.FindById(id).IndicadoPor == "Danilin");
+            Assert.True(repository.FindById(id).DNLE == "Não sei o que é");
         }
     }
 }

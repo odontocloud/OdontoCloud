@@ -42,11 +42,22 @@ internal class Program
         //cliente.DNLE = "";
         //cliente.TelCelular = "1899754565";
 
-        //var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
-        //var context = new OdontoCloudDBContext(optionsBuilder.Options);
+        Endereco endereco = new Endereco();
+        endereco.DescricaoEndereco = "Rua do Fico";
+        endereco.Numero = "134B";
+        endereco.Bairo = "Ipanema";
+        endereco.Cidade = "Araçatuba";
+        endereco.UF = "SP";
+        endereco.Pais = "Brasil";
+        endereco.Cep = "16052-250";
+        endereco.Complemento = "Nada";
+        endereco.Tipo = TipoEndereco.Residencial.ToString();
 
-        //var repository = new ClienteRepository(context);
-        //repository.Save(cliente);
+        var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
+        var context = new OdontoCloudDBContext(optionsBuilder.Options);
+
+        var repository = new EnderecoRepository(context);
+        repository.Save(endereco);
 
         app.Run();
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7c+ftsMn5SUA+/045lZS5qI4/tYv+sVlvwabhxIh74XJOWm97PRCFnF3b8TjsBAAJ5jhRkCQ7fO+76swgsu7GQ==",
+  "dgSpecHash": "zGtnKsJb2BhDaW+4fNKpnK6343o5k7dacXTngETCDfSqHJkQTU3XLX8Ec3Yr8HEhzkcepYc6+7GN1dHcXYhtDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\duzan\\source\\repos\\OdontoCloud\\OdontoCloud.Infrastructure\\OdontoCloud.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.5\\microsoft.entityframeworkcore.design.7.0.5.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.5\\microsoft.entityframeworkcore.relational.7.0.5.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.5\\microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512",
+    "C:\\Users\\duzan\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.5\\microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\duzan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
