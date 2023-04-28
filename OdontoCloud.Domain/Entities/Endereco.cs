@@ -1,12 +1,9 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace OdontoCloud.Domain.Entities
+﻿namespace OdontoCloud.Domain.Entities
 {
     public enum TipoEndereco { Residencial, Comercial };
 
     public class Endereco
     {
-
         public Endereco() { }
         public Endereco(int id, int idCliente, string descricaoEndereco, string numero, string bairo, string cidade, string uF, string pais, string cep, string complemento, string tipo)
         {

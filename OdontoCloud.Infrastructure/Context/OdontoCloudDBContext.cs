@@ -9,6 +9,7 @@ namespace OdontoCloud.Infrastructure.Context
         public DbSet<Anamnese> Anamnese { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Atendimento> Atendimento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,6 +35,12 @@ namespace OdontoCloud.Infrastructure.Context
             modelBuilder.Entity<Endereco>(entity =>
             {
                 entity.HasKey(e => e.Id).HasName("Endereco_PK");
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
+
+            modelBuilder.Entity<Atendimento>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("Atendimento_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
         }

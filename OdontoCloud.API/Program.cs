@@ -2,7 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using OdontoCloud.Domain.Entities;
 using OdontoCloud.Infrastructure.Context;
 using OdontoCloud.Infrastructure.Repositories;
+using System.Drawing;
 using System.Runtime.InteropServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 internal class Program
 {
@@ -42,22 +44,30 @@ internal class Program
         //cliente.DNLE = "";
         //cliente.TelCelular = "1899754565";
 
-        Endereco endereco = new Endereco();
-        endereco.DescricaoEndereco = "Rua do Fico";
-        endereco.Numero = "134B";
-        endereco.Bairo = "Ipanema";
-        endereco.Cidade = "Araçatuba";
-        endereco.UF = "SP";
-        endereco.Pais = "Brasil";
-        endereco.Cep = "16052-250";
-        endereco.Complemento = "Nada";
-        endereco.Tipo = TipoEndereco.Residencial.ToString();
+        //Endereco endereco = new Endereco();
+        //endereco.DescricaoEndereco = "Rua do Fico";
+        //endereco.Numero = "134B";
+        //endereco.Bairo = "Ipanema";
+        //endereco.Cidade = "Araçatuba";
+        //endereco.UF = "SP";
+        //endereco.Pais = "Brasil";
+        //endereco.Cep = "16052-250";
+        //endereco.Complemento = "Nada";
+        //endereco.Tipo = TipoEndereco.Residencial.ToString();
+
+        Atendimento atendimento = new Atendimento();
+        atendimento.Descricao = "Limpeza";
+        atendimento.Data = new DateTime(2023, 04, 28);
+        atendimento.IdCliente = 1;
+        atendimento.Situacao = "Finalizado";
+        atendimento.TempoDuracao = 60;
+        atendimento.Valor = 100;
 
         var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
         var context = new OdontoCloudDBContext(optionsBuilder.Options);
 
-        var repository = new EnderecoRepository(context);
-        repository.Save(endereco);
+        var repository = new AtendimentoRepository(context);
+        repository.Save(atendimento);
 
         app.Run();
     }
