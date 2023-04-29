@@ -63,11 +63,18 @@ internal class Program
         atendimento.TempoDuracao = 60;
         atendimento.Valor = 100;
 
+        DetalheAtendimento detalheAtendimento = new DetalheAtendimento();
+        detalheAtendimento.IdAtendimento = 1;
+        detalheAtendimento.IdItem = 1;
+        detalheAtendimento.QuantidadeItem = 10;
+
         var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
         var context = new OdontoCloudDBContext(optionsBuilder.Options);
 
         var repository = new AtendimentoRepository(context);
+        var repositoryDetalhe = new DetalheAtendimentoRepository(context);
         repository.Save(atendimento);
+        repositoryDetalhe.Save(detalheAtendimento);
 
         app.Run();
     }

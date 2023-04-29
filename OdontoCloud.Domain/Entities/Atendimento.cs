@@ -21,5 +21,6 @@
         public int TempoDuracao { get; set; }
         public double Valor { get; set; }
         public string Situacao { get; set; } //qual será a situação? Será um enum?
+        //public ICollection<DetalheAtendimento> DetalhesAtendimento { get; }
     }
 }
