@@ -1,15 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OdontoCloud.Domain.Entities;
+using System.Reflection.Metadata;
 
 namespace OdontoCloud.Infrastructure.Context
 {
-    public class OdontoCloudDBContext: DbContext
+    public class OdontoCloudDBContext : DbContext
     {
-        public OdontoCloudDBContext(DbContextOptions<OdontoCloudDBContext> options): base(options) { }
+        public OdontoCloudDBContext(DbContextOptions<OdontoCloudDBContext> options) : base(options) { }
         public DbSet<Anamnese> Anamnese { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Atendimento> Atendimento { get; set; }
+        public DbSet<DetalheAtendimento> DetalheAtendimento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -43,6 +45,18 @@ namespace OdontoCloud.Infrastructure.Context
                 entity.HasKey(e => e.Id).HasName("Atendimento_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
+
+            modelBuilder.Entity<DetalheAtendimento>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("DetalheAtendimento_PK");
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
+
+            //modelBuilder.Entity<Atendimento>()
+            //    .HasMany(e => e.DetalhesAtendimento)
+            //    .WithOne(e => e.IdAtendimento)
+            //    .HasForeignKey(e => e.Id)
+            //    .HasPrincipalKey(e => e.IdAtendimento);
         }
     }
 }
