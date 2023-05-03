@@ -114,10 +114,10 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             
             //Act
             var id = repository.Save(enderecoRuaDoFico).Id;
-            Endereco enderecoFindAll = repository.FindById(id);
+            Endereco enderecoFindById = repository.FindById(id);
 
             //Assert
-            Assert.True(enderecoFindAll.DescricaoEndereco == "Rua do Fico");
+            Assert.True(enderecoFindById.DescricaoEndereco == "Rua do Fico");
         }
 
         [Fact]

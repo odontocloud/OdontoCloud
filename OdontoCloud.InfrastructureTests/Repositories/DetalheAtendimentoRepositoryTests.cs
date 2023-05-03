@@ -141,10 +141,10 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             //Act
             repositoryAtendimento.Save(primeiroAtendimento);
             var id = repositoryDetalheAtendimento.Save(primeiroDetalheAtendimento).Id;
-            DetalheAtendimento detalheAtendimentoFindAll = repositoryDetalheAtendimento.FindById(id);
+            DetalheAtendimento detalheAtendimentoFindById = repositoryDetalheAtendimento.FindById(id);
 
             //Assert
-            Assert.True(detalheAtendimentoFindAll.QuantidadeItem == 10);
+            Assert.True(detalheAtendimentoFindById.QuantidadeItem == 10);
         }
     }
 }
