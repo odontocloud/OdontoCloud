@@ -91,10 +91,10 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
 
             //Act
             var id = repository.Save(new Anamnese() { DescricaoAlergia = "Alergia do lobão" }).Id;
-            Anamnese anamnese = repository.FindById(id);
+            Anamnese anamneseFindById = repository.FindById(id);
 
             //Assert
-            Assert.True(anamnese.DescricaoAlergia == "Alergia do lobão");
+            Assert.True(anamneseFindById.DescricaoAlergia == "Alergia do lobão");
         }
     }
 }

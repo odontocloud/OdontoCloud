@@ -111,10 +111,10 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             
             //Act
             var id = repository.Save(clientePaulinPinho).Id;
-            Cliente clienteFindAll = repository.FindById(id);
+            Cliente clienteFindById = repository.FindById(id);
 
             //Assert
-            Assert.True(clienteFindAll.Nome == "Paulin Pinho");
+            Assert.True(clienteFindById.Nome == "Paulin Pinho");
         }
 
         [Fact]
