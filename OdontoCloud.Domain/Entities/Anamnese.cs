@@ -37,6 +37,7 @@ namespace OdontoCloud.Domain.Entities
 
         public int Id { get; set; }
         public int IdCliente { get; set; }
+        public Cliente Cliente { get; set; }
         public bool DoencaCardiovascular { get; set; }
         public string? DescricaoDoencaCardiovascular { get; set; }
         public bool Hipertencao { get; set; }

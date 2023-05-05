@@ -2,12 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using OdontoCloud.Domain.Entities;
 using OdontoCloud.Infrastructure.Context;
 using OdontoCloud.Infrastructure.Repositories;
-using System.Drawing;
-using System.Runtime.InteropServices;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 internal class Program
 {
+    public static IHostBuilder CreateHostBuilder(string[] args)
+        => Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(
+                webBuilder => webBuilder.UseStartup<Startup>());
+
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -55,32 +57,32 @@ internal class Program
         //endereco.Complemento = "Nada";
         //endereco.Tipo = TipoEndereco.Residencial.ToString();
 
-        //Atendimento atendimento = new Atendimento();
-        //atendimento.Descricao = "Limpeza";
-        //atendimento.Data = new DateTime(2023, 04, 28);
-        //atendimento.IdCliente = 1;
-        //atendimento.Situacao = "Finalizado";
-        //atendimento.TempoDuracao = 60;
-        //atendimento.Valor = 100;
+        Atendimento atendimento = new Atendimento();
+        atendimento.Descricao = "Limpeza";
+        atendimento.Data = new DateTime(2023, 04, 28);
+        atendimento.IdCliente = 3;
+        atendimento.Situacao = "Finalizado";
+        atendimento.TempoDuracao = 60;
+        atendimento.Valor = 100;
 
         //DetalheAtendimento detalheAtendimento = new DetalheAtendimento();
         //detalheAtendimento.IdAtendimento = 1;
         //detalheAtendimento.IdItem = 1;
         //detalheAtendimento.QuantidadeItem = 10;
 
-        Item sugador = new Item();
-        sugador.IdFornecedor = 1;
-        sugador.Descricao = "Sugador";
-        sugador.Marca = "Brastemp";
-        sugador.UnidadeMedida = "UN";
-        sugador.QuantidadeEstoque = 2;
-        sugador.ValorUnitario = 10;
+        //Item sugador = new Item();
+        //sugador.IdFornecedor = 1;
+        //sugador.Descricao = "Sugador";
+        //sugador.Marca = "Brastemp";
+        //sugador.UnidadeMedida = "UN";
+        //sugador.QuantidadeEstoque = 2;
+        //sugador.ValorUnitario = 10;
 
         var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
         var context = new OdontoCloudDBContext(optionsBuilder.Options);
 
-        var repository = new ItemRepository(context);
-        repository.Save(sugador);
+        var repository = new AtendimentoRepository(context);
+        repository.Save(atendimento);
 
         app.Run();
     }

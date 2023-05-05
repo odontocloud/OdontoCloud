@@ -16,11 +16,12 @@
 
         public int Id { get; set; }
         public int IdCliente { get; set; }
+        public Cliente Cliente { get; set; }
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
         public int TempoDuracao { get; set; }
         public double Valor { get; set; }
-        public string Situacao { get; set; } //qual será a situação? Será um enum?
-        //public ICollection<DetalheAtendimento> DetalhesAtendimento { get; }
+        public string Situacao { get; set; } //qual será a situação? Será um enum?}
+        public List<DetalheAtendimento> DetalheAtendimentos { get; set; }
     }
 }

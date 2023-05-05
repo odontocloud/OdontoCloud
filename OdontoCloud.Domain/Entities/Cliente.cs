@@ -7,5 +7,7 @@
         public string? TelResidencial { get; set; }
         public string? IndicadoPor { get; set; }
         public string? DNLE { get; set; }
+        public List<Atendimento> Atendimentos { get; set; }
+        public List<Anamnese> Anamneses { get; set; }
     }
 }
