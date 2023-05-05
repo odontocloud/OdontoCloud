@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OdontoCloud.Domain.Entities;
-using System.Reflection.Metadata;
 
 namespace OdontoCloud.Infrastructure.Context
 {
@@ -27,6 +26,11 @@ namespace OdontoCloud.Infrastructure.Context
             {
                 entity.HasKey(e => e.Id).HasName("Anamnese_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+                entity.HasOne(e => e.Cliente)
+                        .WithMany(e => e.Anamneses)
+                        .HasForeignKey(e => e.IdCliente)
+                        .IsRequired(true);
             });
 
             modelBuilder.Entity<Cliente>(entity =>
@@ -45,12 +49,28 @@ namespace OdontoCloud.Infrastructure.Context
             {
                 entity.HasKey(e => e.Id).HasName("Atendimento_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+                entity.HasOne(e => e.Cliente)
+                        .WithMany(e => e.Atendimentos)
+                        .HasForeignKey(e => e.IdCliente)
+                        .IsRequired(true);
+                        //.OnDelete(DeleteBehavior.SetNull);
             });
 
             modelBuilder.Entity<DetalheAtendimento>(entity =>
             {
                 entity.HasKey(e => e.Id).HasName("DetalheAtendimento_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+                entity.HasOne(e => e.Atendimento)
+                        .WithMany(e => e.DetalheAtendimentos)
+                        .HasForeignKey(e => e.IdAtendimento)
+                        .IsRequired(true);
+
+                entity.HasOne(e => e.Item)
+                        .WithMany(e => e.DetalheAtendimentos)
+                        .HasForeignKey(e => e.IdItem)
+                        .IsRequired(true);
             });
 
             modelBuilder.Entity<Item>(entity =>

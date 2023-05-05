@@ -28,5 +28,6 @@ namespace OdontoCloud.Domain.Entities
         public string UnidadeMedida { get; set; }
         public double ValorUnitario { get; set; }
         public string Marca { get; set; }
+        public List<DetalheAtendimento> DetalheAtendimentos { get; set; }
     }
 }
