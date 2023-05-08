@@ -13,6 +13,9 @@ namespace OdontoCloud.Infrastructure.Context
         public DbSet<DetalheAtendimento> DetalheAtendimento { get; set; }
         public DbSet<Item> Item { get; set; }
 
+        public DbSet<Fornecedor> Fornecedor { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -84,6 +87,12 @@ namespace OdontoCloud.Infrastructure.Context
             //    .WithOne(e => e.IdAtendimento)
             //    .HasForeignKey(e => e.Id)
             //    .HasPrincipalKey(e => e.IdAtendimento);
+
+            modelBuilder.Entity<Fornecedor>(entity =>
+            {
+                entity.HasKey(f => f.Id).HasName("Fornecedor_PK");
+                entity.Property(f => f.Id).ValueGeneratedOnAdd();
+            });
         }
     }
 }
