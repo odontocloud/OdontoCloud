@@ -23,6 +23,7 @@ namespace OdontoCloud.Domain.Entities
 
         public int Id { get; set; }
         public int IdFornecedor { get; set; }
+        public Fornecedor Fornecedor { get; set; }
         public string Descricao { get; set; }
         public double QuantidadeEstoque { get; set; }
         public string UnidadeMedida { get; set; }
