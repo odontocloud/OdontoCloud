@@ -42,5 +42,6 @@ namespace OdontoCloud.Domain.Entities
         public string? Bairro { get; set; }
         public int? Numero { get; set; }
         public string? Uf { get; set; }
+        public List<Item> Itens { get; set; }
     }
 }

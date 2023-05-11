@@ -12,8 +12,8 @@ namespace OdontoCloud.Infrastructure.Context
         public DbSet<Atendimento> Atendimento { get; set; }
         public DbSet<DetalheAtendimento> DetalheAtendimento { get; set; }
         public DbSet<Item> Item { get; set; }
-
         public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -42,6 +42,12 @@ namespace OdontoCloud.Infrastructure.Context
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
 
+            modelBuilder.Entity<Funcionario>(entity =>
+            {
+                entity.HasKey(f => f.Id).HasName("Funcionario_PK");
+                entity.Property(f => f.Id).ValueGeneratedOnAdd();
+            });
+
             modelBuilder.Entity<Endereco>(entity =>
             {
                 entity.HasKey(e => e.Id).HasName("Endereco_PK");
@@ -57,7 +63,12 @@ namespace OdontoCloud.Infrastructure.Context
                         .WithMany(e => e.Atendimentos)
                         .HasForeignKey(e => e.IdCliente)
                         .IsRequired(true);
-                        //.OnDelete(DeleteBehavior.SetNull);
+                //.OnDelete(DeleteBehavior.SetNull);
+
+                entity.HasOne(e => e.Funcionario)
+                        .WithMany(e => e.Atendimentos)
+                        .HasForeignKey(e => e.IdFuncionario)
+                        .IsRequired(true);
             });
 
             modelBuilder.Entity<DetalheAtendimento>(entity =>
@@ -80,13 +91,12 @@ namespace OdontoCloud.Infrastructure.Context
             {
                 entity.HasKey(e => e.Id).HasName("Item_PK");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
-            });
 
-            //modelBuilder.Entity<Atendimento>()
-            //    .HasMany(e => e.DetalhesAtendimento)
-            //    .WithOne(e => e.IdAtendimento)
-            //    .HasForeignKey(e => e.Id)
-            //    .HasPrincipalKey(e => e.IdAtendimento);
+                entity.HasOne(e => e.Fornecedor)
+                        .WithMany(e => e.Itens)
+                        .HasForeignKey(e => e.IdFornecedor)
+                        .IsRequired(true);
+            });
 
             modelBuilder.Entity<Fornecedor>(entity =>
             {

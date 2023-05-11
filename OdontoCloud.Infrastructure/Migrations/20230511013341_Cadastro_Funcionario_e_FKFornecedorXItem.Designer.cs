@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OdontoCloud.Infrastructure.Context;
 
@@ -11,9 +12,11 @@ using OdontoCloud.Infrastructure.Context;
 namespace OdontoCloud.Infrastructure.Migrations
 {
     [DbContext(typeof(OdontoCloudDBContext))]
-    partial class OdontoCloudDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230511013341_Cadastro_Funcionario_e_FKFornecedorXItem")]
+    partial class Cadastro_Funcionario_e_FKFornecedorXItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

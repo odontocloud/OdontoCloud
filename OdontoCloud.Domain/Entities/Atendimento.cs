@@ -3,10 +3,11 @@
     public class Atendimento
     {
         public Atendimento() { }
-        public Atendimento(int id, int idCliente, DateTime data, int tempoDuracao, double valor, string descricao, string situacao)
+        public Atendimento(int id, int idCliente, int idFuncionario, DateTime data, int tempoDuracao, double valor, string descricao, string situacao)
         {
             Id = id;
             IdCliente = idCliente;
+            IdFuncionario = idFuncionario;
             Data = data;
             TempoDuracao = tempoDuracao;
             Valor = valor;
@@ -17,6 +18,8 @@
         public int Id { get; set; }
         public int IdCliente { get; set; }
         public Cliente Cliente { get; set; }
+        public int IdFuncionario { get; set; }
+        public Funcionario Funcionario{ get; set; }
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
         public int TempoDuracao { get; set; }
