@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using OdontoCloud.Domain.Entities;
 using OdontoCloud.Infrastructure.Context;
-using OdontoCloud.Infrastructure.Repositories;
 
 internal class Program
 {
@@ -14,9 +12,14 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
+        //builder.Services.AddDbContext<OdontoCloudDBContext>(options =>
+        //    options.UseSqlServer("DefaultConnection"));
 
+        //builder.Services.AddScoped<IRepository, ClienteRepository>();
+
+        // Add services to the container.
         builder.Services.AddControllers();
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -57,13 +60,13 @@ internal class Program
         //endereco.Complemento = "Nada";
         //endereco.Tipo = TipoEndereco.Residencial.ToString();
 
-        Atendimento atendimento = new Atendimento();
-        atendimento.Descricao = "Limpeza";
-        atendimento.Data = new DateTime(2023, 04, 28);
-        atendimento.IdCliente = 3;
-        atendimento.Situacao = "Finalizado";
-        atendimento.TempoDuracao = 60;
-        atendimento.Valor = 100;
+        //Atendimento atendimento = new Atendimento();
+        //atendimento.Descricao = "Limpeza";
+        //atendimento.Data = new DateTime(2023, 04, 28);
+        //atendimento.IdCliente = 3;
+        //atendimento.Situacao = "Finalizado";
+        //atendimento.TempoDuracao = 60;
+        //atendimento.Valor = 100;
 
         //DetalheAtendimento detalheAtendimento = new DetalheAtendimento();
         //detalheAtendimento.IdAtendimento = 1;
@@ -78,11 +81,11 @@ internal class Program
         //sugador.QuantidadeEstoque = 2;
         //sugador.ValorUnitario = 10;
 
-        var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
-        var context = new OdontoCloudDBContext(optionsBuilder.Options);
+        //var optionsBuilder = new DbContextOptionsBuilder<OdontoCloudDBContext>();
+        //var context = new OdontoCloudDBContext(optionsBuilder.Options);
 
-        var repository = new AtendimentoRepository(context);
-        repository.Save(atendimento);
+        //var repository = new AtendimentoRepository(context);
+        //repository.Save(atendimento);
 
         app.Run();
     }
