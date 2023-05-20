@@ -1,0 +1,14 @@
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\bin\Release\net7.0\OdontoCloud.Domain.deps.json
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\bin\Release\net7.0\OdontoCloud.Domain.runtimeconfig.json
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\bin\Release\net7.0\OdontoCloud.Domain.dll
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\bin\Release\net7.0\OdontoCloud.Domain.pdb
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.csproj.AssemblyReference.cache
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.AssemblyInfoInputs.cache
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.AssemblyInfo.cs
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.csproj.CoreCompileInputs.cache
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.dll
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\refint\OdontoCloud.Domain.dll
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.pdb
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\OdontoCloud.Domain.genruntimeconfig.cache
+C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.Domain\obj\Release\net7.0\ref\OdontoCloud.Domain.dll

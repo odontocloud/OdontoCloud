@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WPohvALazlA6GhXnPMmV6nxwrqNvsj1Oahj1OhBA+1s=",
+  "Source": "OdontoCloud.API",
+  "BasePath": "_content/OdontoCloud.API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
