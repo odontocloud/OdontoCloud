@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["OdontoCloud/OdontoCloud.csproj", "OdontoCloud/"]
-RUN dotnet restore "OdontoCloud/OdontoCloud.csproj"
+COPY ["OdontoCloud.API/OdontoCloud.API.csproj", "OdontoCloud.API/"]
+RUN dotnet restore "OdontoCloud.API/OdontoCloud.API.csproj"
 COPY . .
-WORKDIR "/src/OdontoCloud"
-RUN dotnet build "OdontoCloud.csproj" -c Release -o /app/build
+WORKDIR "/src/OdontoCloud.API"
+RUN dotnet build "OdontoCloud.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "OdontoCloud.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "OdontoCloud.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "OdontoCloud.dll"]
+ENTRYPOINT ["dotnet", "OdontoCloud.API.dll"]

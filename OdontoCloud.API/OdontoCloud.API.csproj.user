@@ -7,4 +7,7 @@
     <WebStackScaffolding_ControllerDialogWidth>788</WebStackScaffolding_ControllerDialogWidth>
     <NameOfLastUsedPublishProfile>C:\Users\danil\Documents\Projetos\OdontoCloud\OdontoCloud.API\Properties\PublishProfiles\OdontoCloudAPI - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using OdontoCloud.Infrastructure.Context;
+using System.Reflection;
 
 internal class Program
 {
@@ -12,24 +14,31 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        //builder.Services.AddDbContext<OdontoCloudDBContext>(options =>
-        //    options.UseSqlServer("DefaultConnection"));
+        builder.Services.AddDbContext<OdontoCloudDBContext>(option =>
+            option.UseSqlServer(builder.Configuration.GetConnectionString("OdontoCloudDBContextConnection")));
 
-        //builder.Services.AddScoped<IRepository, ClienteRepository>();
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         // Add services to the container.
-        builder.Services.AddControllers();
+        builder.Services.AddControllers().AddNewtonsoftJson();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        //builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "OdontoCloud.API", Version = "v1" });
+            var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            c.IncludeXmlComments(xmlPath);
+        });
 
         var app = builder.Build();
 
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "OdontoCloud.API");
             c.RoutePrefix = string.Empty;
         });
 

@@ -45,7 +45,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestUpdate()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
             
             //Act
             var id = repository.Save(clientePaulinPinho).Id;
@@ -61,7 +61,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestDeleteById()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
             
             //Act
             repository.Save(clientePaulinPinho);
@@ -77,7 +77,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestCount()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
             
             //Act
             repository.Save(clientePaulinPinho);
@@ -92,7 +92,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestFindAll()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
             
             //Act
             repository.Save(clientePaulinPinho);
@@ -107,7 +107,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestFindById()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
             
             //Act
             var id = repository.Save(clientePaulinPinho).Id;
@@ -121,7 +121,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         public void TestNullableFields()
         {
             //Arrange
-            var repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
+            ClienteRepository repository = new ClienteRepository(OdontoCloudTestUtil.GetDbContextInMemory());
 
             //Act
             var id = repository.Save(clientePaulinPinho).Id;
