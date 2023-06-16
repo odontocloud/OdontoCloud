@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OdontoCloud.Domain.Entities;
+using OdontoCloud.Infrastructure.Migrations;
 
 namespace OdontoCloud.Infrastructure.Context
 {
@@ -109,3 +111,7 @@ namespace OdontoCloud.Infrastructure.Context
         }
     }
 }
+
+//Comandos Migration
+// Incluir uma Migration: Add - Migration NomeDoArquivo
+// Aplicar alteração no modelo de entidades no banco de dados: Update-DataBase

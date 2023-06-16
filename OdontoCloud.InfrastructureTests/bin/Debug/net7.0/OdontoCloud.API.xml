@@ -48,5 +48,49 @@
             <response code="204">Caso a delecao seja feita com sucesso</response>
             <response code="404">Caso o cliente a ser apagado nao seja identificado</response>	
         </member>
+        <member name="M:OdontoCloud.Controllers.EnderecoController.PostEndereco(OdontoCloud.Infrastructure.DTOs.Endereco.EnderecoWriteDTO)">
+            <summary>
+            Adiciona um endereco ao banco de dados
+            </summary>
+            <param name="enderecoDTO">Objeto com os campos necessarios para criacao de um endereco</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.EnderecoController.GetEnderecos(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de enderecos do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.EnderecoController.GetEnderecoById(System.Int32)">
+            <summary>
+            Retorna um endereco do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um endereco</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso o endereco nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.EnderecoController.PutEndereco(System.Int32,OdontoCloud.Infrastructure.DTOs.Endereco.EnderecoWriteDTO)">
+            <summary>
+            Atualiza todos os campos de um endereco no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um endereco</param>
+            <param name="enderecoDTO">Objeto com os campos necessarios para atualizacao de um endereco</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso o endereco a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.EnderecoController.PatchEndereco(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Endereco.EnderecoWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.EnderecoController.DeleteEndereco(System.Int32)">
+            <summary>
+            Apaga um endereco no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar um endereco</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso o endereco a ser apagado nao seja identificado</response>	
+        </member>
     </members>
 </doc>

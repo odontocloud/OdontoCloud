@@ -10,7 +10,6 @@ using OdontoCloud.Infrastructure.DTOs.Cliente;
 using OdontoCloud.Controllers;
 using OdontoCloud.InfrastructureTests.Utilitaries;
 using Microsoft.AspNetCore.JsonPatch;
-using NuGet.Protocol;
 
 namespace OdontoCloud.InfrastructureTests.Controller
 {
