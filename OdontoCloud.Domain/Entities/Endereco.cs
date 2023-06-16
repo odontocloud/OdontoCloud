@@ -5,13 +5,13 @@
     public class Endereco
     {
         public Endereco() { }
-        public Endereco(int id, int idCliente, string descricaoEndereco, string numero, string bairo, string cidade, string uF, string pais, string cep, string complemento, string tipo)
+        public Endereco(int id, int idCliente, string descricaoEndereco, string numero, string bairro, string cidade, string uF, string pais, string cep, string complemento, string tipo)
         {
             Id = id;
             IdCliente = idCliente;
             DescricaoEndereco = descricaoEndereco;
             Numero = numero;
-            Bairo = bairo;
+            Bairro = bairro;
             Cidade = cidade;
             UF = uF;
             Pais = pais;
@@ -24,7 +24,7 @@
         public int IdCliente { get; set; }
         public string DescricaoEndereco { get; set; }
         public string Numero { get; set; }
-        public string Bairo { get; set; }
+        public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string UF { get; set; }
         public string Pais { get; set; }

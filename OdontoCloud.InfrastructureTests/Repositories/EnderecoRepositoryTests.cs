@@ -10,7 +10,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         {
             DescricaoEndereco = "Rua do Fico",
             Numero = "1345",
-            Bairo = "Ipanema",
+            Bairro = "Ipanema",
             Cidade = "Araçatuba",
             UF = "SP",
             Pais = "Brasil",
@@ -23,7 +23,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
         {
             DescricaoEndereco = "Avenida Prestes Maia",
             Numero = "623",
-            Bairo = "Dona Amália",
+            Bairro = "Dona Amália",
             Cidade = "Araçatuba",
             UF = "SP",
             Pais = "Brasil",
