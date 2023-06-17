@@ -27,7 +27,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
             TelCelular = "(18) 999996662",
             TelResidencial = "(18) 36225987",
             IndicadoPor = "Danilin",
-            DNLE = "Não sei o que é",
+            DNLE = "Não sei o que é"
         };
 
         Cliente clienteDanilin = new Cliente

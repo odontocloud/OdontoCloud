@@ -9,7 +9,8 @@ namespace OdontoCloud.Infrastructure.DTOs.Endereco
 {
     public class EnderecoWriteDTO
     {
-        //public int IdCliente { get; set; }
+        [Required(ErrorMessage = "O Id do Cliente é obrigatório.")]
+        public int IdCliente { get; set; }
 
         [Required(ErrorMessage = "O Endereço é obrigatório.")]
         public string DescricaoEndereco { get; set; }
