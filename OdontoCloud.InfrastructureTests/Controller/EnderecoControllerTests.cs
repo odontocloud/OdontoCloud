@@ -18,6 +18,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
     {
         Endereco enderecoRuaDoFico = new Endereco
         {
+            IdCliente = 1,
             DescricaoEndereco = "Rua do Fico",
             Numero = "1345",
             Bairro = "Ipanema",
@@ -31,6 +32,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
 
         Endereco enderecoAvenidaPrestesMaia = new Endereco
         {
+            IdCliente = 2,
             DescricaoEndereco = "Avenida Prestes Maia",
             Numero = "623",
             Bairro = "Dona Amália",
@@ -77,6 +79,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
             //Assert
             Assert.Equal((int)HttpStatusCode.OK, resultGetEnderecoById.StatusCode);
             Assert.Equal(1, enderecoReadDTO.Id);
+            Assert.Equal(1, enderecoReadDTO.IdCliente);
             Assert.Equal("Rua do Fico", enderecoReadDTO.DescricaoEndereco);
             Assert.Equal("1345", enderecoReadDTO.Numero);
             Assert.Equal("Ipanema", enderecoReadDTO.Bairro);
@@ -132,6 +135,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
             //Assert
             Assert.Equal((int)HttpStatusCode.OK, resultGetClienteById.StatusCode);
             Assert.Equal(1, enderecoReadDTO.Id);
+            Assert.Equal(1, enderecoReadDTO.IdCliente);
             Assert.Equal("Rua do Fico", enderecoReadDTO.DescricaoEndereco);
             Assert.Equal("1345", enderecoReadDTO.Numero);
             Assert.Equal("Ipanema", enderecoReadDTO.Bairro);
@@ -175,6 +179,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
             //Assert
             Assert.Equal((int)HttpStatusCode.OK, resultGetEnderecoById.StatusCode);
             Assert.Equal(1, enderecoReadDTO.Id);
+            Assert.Equal(1, enderecoReadDTO.IdCliente);
             Assert.Equal("Rua do Fico", enderecoReadDTO.DescricaoEndereco);
             Assert.Equal("1345", enderecoReadDTO.Numero);
             Assert.Equal("Ipanema", enderecoReadDTO.Bairro);

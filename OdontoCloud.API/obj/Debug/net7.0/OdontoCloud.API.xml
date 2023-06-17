@@ -92,5 +92,49 @@
             <response code="204">Caso a delecao seja feita com sucesso</response>
             <response code="404">Caso o endereco a ser apagado nao seja identificado</response>	
         </member>
+        <member name="M:OdontoCloud.Controllers.FuncionarioController.PostFuncionario(OdontoCloud.Infrastructure.DTOs.Funcionario.FuncionarioWriteDTO)">
+            <summary>
+            Adiciona um funcionario ao banco de dados
+            </summary>
+            <param name="funcionarioDTO">Objeto com os campos necessarios para criacao de um funcionario</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FuncionarioController.GetFuncionarios(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de funcionarios do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FuncionarioController.GetFuncionarioById(System.Int32)">
+            <summary>
+            Retorna um funcionario do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um funcionario</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso o funcionario nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FuncionarioController.PutFuncionario(System.Int32,OdontoCloud.Infrastructure.DTOs.Funcionario.FuncionarioWriteDTO)">
+            <summary>
+            Atualiza todos os campos de um funcionario no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um funcionario</param>
+            <param name="funcionarioDTO">Objeto com os campos necessarios para atualizacao de um funcionario</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso o funcionario a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.FuncionarioController.PatchFuncionario(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Funcionario.FuncionarioWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.FuncionarioController.DeleteFuncionario(System.Int32)">
+            <summary>
+            Apaga um funcionario no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar um funcionario</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso o funcionario a ser apagado nao seja identificado</response>	
+        </member>
     </members>
 </doc>
