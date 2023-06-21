@@ -4,6 +4,50 @@
         <name>OdontoCloud.API</name>
     </assembly>
     <members>
+        <member name="M:OdontoCloud.Controllers.AtendimentoController.PostAtendimento(OdontoCloud.Infrastructure.DTOs.Atendimento.AtendimentoWriteDTO)">
+            <summary>
+            Adiciona um atendimento ao banco de dados
+            </summary>
+            <param name="atendimentoDTO">Objeto com os campos necessarios para criacao de um atendimento</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AtendimentoController.GetAtendimentos(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de atendimentos do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AtendimentoController.GetAtendimentoById(System.Int32)">
+            <summary>
+            Retorna um atendimento do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um atendimento</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso o atendimento nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AtendimentoController.PutAtendimento(System.Int32,OdontoCloud.Infrastructure.DTOs.Atendimento.AtendimentoWriteDTO)">
+            <summary>
+            Atualiza todos os campos de um atendimento no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um atendimento</param>
+            <param name="atendimentoDTO">Objeto com os campos necessarios para atualizacao de um atendimento</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso o atendimento a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.AtendimentoController.PatchAtendimento(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Atendimento.AtendimentoWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.AtendimentoController.DeleteAtendimento(System.Int32)">
+            <summary>
+            Apaga um atendimento no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar um atendimento</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso o atendimento a ser apagado nao seja identificado</response>	
+        </member>
         <member name="M:OdontoCloud.Controllers.ClienteController.PostCliente(OdontoCloud.Infrastructure.DTOs.Cliente.ClienteWriteDTO)">
             <summary>
             Adiciona um cliente ao banco de dados
