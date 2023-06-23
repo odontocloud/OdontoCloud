@@ -11,6 +11,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             Descricao = "Limpeza",
             Data = new DateTime(2023, 04, 28),
             IdCliente = 1,
+            IdFuncionario = 1,
             Situacao = "Finalizado",
             TempoDuracao = 60,
             Valor = 100
@@ -28,6 +29,7 @@ namespace OdontoCloud.Infrastructure.Repositories.Tests
             Descricao = "Obturação",
             Data = new DateTime(2023, 04, 28),
             IdCliente = 1,
+            IdFuncionario = 1,
             Situacao = "Finalizado",
             TempoDuracao = 90,
             Valor = 150

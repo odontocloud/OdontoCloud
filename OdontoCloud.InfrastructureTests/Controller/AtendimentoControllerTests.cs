@@ -177,14 +177,14 @@ namespace OdontoCloud.InfrastructureTests.Controller
             Assert.Equal("Finalizado", atendimentoReadDTO.Situacao);
 
             //Act
-            var jasonCliente = new JsonPatchDocument<AtendimentoWriteDTO>();
+            var jasonAtendimento = new JsonPatchDocument<AtendimentoWriteDTO>();
 
-            jasonCliente.Replace<string>(x => x.Situacao, "Andamento");
+            jasonAtendimento.Replace<string>(x => x.Situacao, "Andamento");
             
-            var resultPutCliente = atendimentoController.PatchAtendimento(IdAtendimento, jasonCliente) as NoContentResult;
+            var resultPutAtendimento = atendimentoController.PatchAtendimento(IdAtendimento, jasonAtendimento) as NoContentResult;
 
             //Assert
-            Assert.Equal((int)HttpStatusCode.NoContent, resultPutCliente.StatusCode);
+            Assert.Equal((int)HttpStatusCode.NoContent, resultPutAtendimento.StatusCode);
             Assert.Equal("Andamento", atendimentoReadDTO.Situacao);
         }
 
