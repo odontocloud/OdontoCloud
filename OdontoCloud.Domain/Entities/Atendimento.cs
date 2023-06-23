@@ -25,6 +25,6 @@
         public int TempoDuracao { get; set; }
         public double Valor { get; set; }
         public string Situacao { get; set; } //qual será a situação? Será um enum?}
-        public List<DetalheAtendimento> DetalheAtendimentos { get; set; }
+        public List<DetalheAtendimento> DetalhesAtendimento { get; set; }
     }
 }

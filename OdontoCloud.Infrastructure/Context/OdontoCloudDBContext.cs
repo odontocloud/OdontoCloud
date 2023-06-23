@@ -82,7 +82,7 @@ namespace OdontoCloud.Infrastructure.Context
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.HasOne(e => e.Atendimento)
-                        .WithMany(e => e.DetalheAtendimentos)
+                        .WithMany(e => e.DetalhesAtendimento)
                         .HasForeignKey(e => e.IdAtendimento)
                         .IsRequired(true);
 
@@ -113,5 +113,6 @@ namespace OdontoCloud.Infrastructure.Context
 }
 
 //Comandos Migration
-// Incluir uma Migration: Add - Migration NomeDoArquivo
+// Incluir uma Migration: Add-Migration NomeDoArquivo
 // Aplicar alteração no modelo de entidades no banco de dados: Update-DataBase
+// Apagar último arquivo inserido: Remove-Migration

@@ -4,10 +4,10 @@ namespace OdontoCloud.Infrastructure.DTOs.Atendimento
 {
     public class AtendimentoWriteDTO
     {
-        [Required(ErrorMessage = "O IdCliente é obrigatório.")]
+        [Required(ErrorMessage = "O Id do Cliente é obrigatório.")]
         public int IdCliente { get; set; }
 
-        [Required(ErrorMessage = "O IdFuncionário é obrigatório.")]
+        [Required(ErrorMessage = "O Id do Funcionário é obrigatório.")]
         public int IdFuncionario { get; set; }
 
         [Required(ErrorMessage = "A Descrição do Atendimento é obrigatória.")]
