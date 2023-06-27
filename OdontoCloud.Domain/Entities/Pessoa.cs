@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace OdontoCloud.Domain.Entities
+﻿namespace OdontoCloud.Domain.Entities
 {
     public enum EstadoCivilEnum { Solteiro, Casado, Divorciado, Separado, Viúvo };
 

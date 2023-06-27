@@ -101,7 +101,7 @@ namespace OdontoCloud.Infrastructure.Migrations
 
                     b.HasIndex("IdCliente");
 
-                    b.ToTable("Anamnese", (string)null);
+                    b.ToTable("Anamnese");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Atendimento", b =>
@@ -142,7 +142,7 @@ namespace OdontoCloud.Infrastructure.Migrations
 
                     b.HasIndex("IdFuncionario");
 
-                    b.ToTable("Atendimento", (string)null);
+                    b.ToTable("Atendimento");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Cliente", b =>
@@ -189,7 +189,7 @@ namespace OdontoCloud.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("Cliente_PK");
 
-                    b.ToTable("Cliente", (string)null);
+                    b.ToTable("Cliente");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.DetalheAtendimento", b =>
@@ -206,8 +206,8 @@ namespace OdontoCloud.Infrastructure.Migrations
                     b.Property<int>("IdItem")
                         .HasColumnType("int");
 
-                    b.Property<float>("QuantidadeItem")
-                        .HasColumnType("real");
+                    b.Property<double>("QuantidadeItem")
+                        .HasColumnType("float");
 
                     b.HasKey("Id")
                         .HasName("DetalheAtendimento_PK");
@@ -216,7 +216,7 @@ namespace OdontoCloud.Infrastructure.Migrations
 
                     b.HasIndex("IdItem");
 
-                    b.ToTable("DetalheAtendimento", (string)null);
+                    b.ToTable("DetalheAtendimento");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Endereco", b =>
@@ -268,7 +268,7 @@ namespace OdontoCloud.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("Endereco_PK");
 
-                    b.ToTable("Endereco", (string)null);
+                    b.ToTable("Endereco");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Fornecedor", b =>
@@ -321,7 +321,7 @@ namespace OdontoCloud.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("Fornecedor_PK");
 
-                    b.ToTable("Fornecedor", (string)null);
+                    b.ToTable("Fornecedor");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Funcionario", b =>
@@ -366,7 +366,7 @@ namespace OdontoCloud.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("Funcionario_PK");
 
-                    b.ToTable("Funcionario", (string)null);
+                    b.ToTable("Funcionario");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Item", b =>
@@ -403,7 +403,7 @@ namespace OdontoCloud.Infrastructure.Migrations
 
                     b.HasIndex("IdFornecedor");
 
-                    b.ToTable("Item", (string)null);
+                    b.ToTable("Item");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Anamnese", b =>
@@ -439,7 +439,7 @@ namespace OdontoCloud.Infrastructure.Migrations
             modelBuilder.Entity("OdontoCloud.Domain.Entities.DetalheAtendimento", b =>
                 {
                     b.HasOne("OdontoCloud.Domain.Entities.Atendimento", "Atendimento")
-                        .WithMany("DetalheAtendimentos")
+                        .WithMany("DetalhesAtendimento")
                         .HasForeignKey("IdAtendimento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -468,7 +468,7 @@ namespace OdontoCloud.Infrastructure.Migrations
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Atendimento", b =>
                 {
-                    b.Navigation("DetalheAtendimentos");
+                    b.Navigation("DetalhesAtendimento");
                 });
 
             modelBuilder.Entity("OdontoCloud.Domain.Entities.Cliente", b =>

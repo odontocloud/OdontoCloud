@@ -224,5 +224,49 @@
             <response code="204">Caso a delecao seja feita com sucesso</response>
             <response code="404">Caso o funcionario a ser apagado nao seja identificado</response>	
         </member>
+        <member name="M:OdontoCloud.Controllers.ItemController.PostItem(OdontoCloud.Infrastructure.DTOs.Item.ItemWriteDTO)">
+            <summary>
+            Adiciona um item ao banco de dados
+            </summary>
+            <param name="itemDTO">Objeto com os campos necessarios para criacao de um item</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.ItemController.GetItens(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de itens do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.ItemController.GetItemById(System.Int32)">
+            <summary>
+            Retorna um item do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um item</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso o item nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.ItemController.PutItem(System.Int32,OdontoCloud.Infrastructure.DTOs.Item.ItemWriteDTO)">
+            <summary>
+            Atualiza todos os campos de um item no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um item</param>
+            <param name="itemDTO">Objeto com os campos necessarios para atualizacao de um item</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso o item a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.ItemController.PatchItem(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Item.ItemWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.ItemController.DeleteItem(System.Int32)">
+            <summary>
+            Apaga um item no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar um item</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso o item a ser apagado nao seja identificado</response>	
+        </member>
     </members>
 </doc>
