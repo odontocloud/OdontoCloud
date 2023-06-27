@@ -17,6 +17,6 @@
         public Atendimento Atendimento { get; set; }
         public int IdItem { get; set; }
         public Item Item { get; set; }
-        public float QuantidadeItem { get; set; }
+        public double QuantidadeItem { get; set; }
     }
 }

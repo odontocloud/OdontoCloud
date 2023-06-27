@@ -14,35 +14,13 @@ using Microsoft.AspNetCore.JsonPatch;
 namespace OdontoCloud.InfrastructureTests.Controller
 {
     [TestClass]
-    public class DetalheDetalheAtendimentoControllerTests
+    public class DetalheAtendimentoControllerTests
     {
-        Atendimento primeiroAtendimento = new Atendimento
-        {
-            Descricao = "Limpeza",
-            Data = new DateTime(2023, 04, 28),
-            IdCliente = 1,
-            IdFuncionario = 1,
-            Situacao = "Finalizado",
-            TempoDuracao = 60,
-            Valor = 100
-        };
-
         DetalheAtendimento primeiroDetalheAtendimento = new DetalheAtendimento
         {
             IdAtendimento = 1,
             IdItem = 1,
             QuantidadeItem = 10
-        };
-
-        Atendimento segundoAtendimento = new Atendimento
-        {
-            Descricao = "Obturação",
-            Data = new DateTime(2023, 04, 28),
-            IdCliente = 1,
-            IdFuncionario = 1,
-            Situacao = "Finalizado",
-            TempoDuracao = 90,
-            Valor = 150
         };
 
         DetalheAtendimento segundoDetalheAtendimento = new DetalheAtendimento
@@ -54,7 +32,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
 
         private static IMapper _mapper;
 
-        public DetalheDetalheAtendimentoControllerTests()
+        public DetalheAtendimentoControllerTests()
         {
             if (_mapper == null)
             {
@@ -144,10 +122,10 @@ namespace OdontoCloud.InfrastructureTests.Controller
             //Act
             detalheAtendimentoReadDTO.QuantidadeItem = 15;
 
-            var resultPutAtendimento = detalheAtendimentoController.PutDetalheAtendimento(IdDetalheAtendimento, detalheAtendimentoWriteDTO) as NoContentResult;
+            var resultPutDetalheAtendimento = detalheAtendimentoController.PutDetalheAtendimento(IdDetalheAtendimento, detalheAtendimentoWriteDTO) as NoContentResult;
 
             //Assert
-            Assert.Equal((int)HttpStatusCode.NoContent, resultPutAtendimento.StatusCode);
+            Assert.Equal((int)HttpStatusCode.NoContent, resultPutDetalheAtendimento.StatusCode);
             Assert.Equal(15, detalheAtendimentoReadDTO.QuantidadeItem);
         }
 
@@ -209,10 +187,10 @@ namespace OdontoCloud.InfrastructureTests.Controller
             Assert.Equal(1, detalheAtendimentoReadDTO.Count());
 
             //Act
-            var resultDeleteAtendimento = detalheAtendimentoController.DeleteDetalheAtendimento(IdDetalheAtendimento) as NoContentResult;
+            var resultDeleteDetalheAtendimento = detalheAtendimentoController.DeleteDetalheAtendimento(IdDetalheAtendimento) as NoContentResult;
 
             //Assert
-            Assert.Equal((int)HttpStatusCode.NoContent, resultDeleteAtendimento.StatusCode);
+            Assert.Equal((int)HttpStatusCode.NoContent, resultDeleteDetalheAtendimento.StatusCode);
 
             //Act
             detalheAtendimentoReadDTO = detalheAtendimentoController.GetDetalhesAtendimento();
