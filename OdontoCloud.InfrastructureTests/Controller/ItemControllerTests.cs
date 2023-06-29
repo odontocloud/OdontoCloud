@@ -170,11 +170,11 @@ namespace OdontoCloud.InfrastructureTests.Controller
             Assert.Equal(10, itemReadDTO.ValorUnitario);
 
             //Act
-            var jasonDetalheAtendimento = new JsonPatchDocument<ItemWriteDTO>();
+            var jasonItem = new JsonPatchDocument<ItemWriteDTO>();
 
-            jasonDetalheAtendimento.Replace(x => x.Marca, "Eletrolux");
+            jasonItem.Replace(x => x.Marca, "Eletrolux");
             
-            var resultPutItem = itemController.PatchItem(IdItem, jasonDetalheAtendimento) as NoContentResult;
+            var resultPutItem = itemController.PatchItem(IdItem, jasonItem) as NoContentResult;
 
             //Assert
             Assert.Equal((int)HttpStatusCode.NoContent, resultPutItem.StatusCode);
@@ -182,7 +182,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         }
 
         [Fact]
-        public void TestDeleteDetalheAtendimento()
+        public void TestDeleteItem()
         {
             //Arrange
             ItemController itemController = new ItemController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);

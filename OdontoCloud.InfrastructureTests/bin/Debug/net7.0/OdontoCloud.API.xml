@@ -180,6 +180,50 @@
             <response code="204">Caso a delecao seja feita com sucesso</response>
             <response code="404">Caso o endereco a ser apagado nao seja identificado</response>	
         </member>
+        <member name="M:OdontoCloud.Controllers.FornecedorController.PostFornecedor(OdontoCloud.Infrastructure.DTOs.Fornecedor.FornecedorWriteDTO)">
+            <summary>
+            Adiciona um fornecedor ao banco de dados
+            </summary>
+            <param name="fornecedorDTO">Objeto com os campos necessarios para criacao de um fornecedor</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FornecedorController.GetFornecedores(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de fornecedores do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FornecedorController.GetFornecedorById(System.Int32)">
+            <summary>
+            Retorna um fornecedor do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um fornecedor</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso o fornecedor nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.FornecedorController.PutFornecedor(System.Int32,OdontoCloud.Infrastructure.DTOs.Fornecedor.FornecedorWriteDTO)">
+            <summary>
+            Atualiza todos os campos de um fornecedor no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de um fornecedor</param>
+            <param name="fornecedorDTO">Objeto com os campos necessarios para atualizacao de um fornecedor</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso o fornecedor a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.FornecedorController.PatchFornecedor(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Fornecedor.FornecedorWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.FornecedorController.DeleteFornecedor(System.Int32)">
+            <summary>
+            Apaga um fornecedor no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar um fornecedor</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso o fornecedor a ser apagado nao seja identificado</response>	
+        </member>
         <member name="M:OdontoCloud.Controllers.FuncionarioController.PostFuncionario(OdontoCloud.Infrastructure.DTOs.Funcionario.FuncionarioWriteDTO)">
             <summary>
             Adiciona um funcionario ao banco de dados
