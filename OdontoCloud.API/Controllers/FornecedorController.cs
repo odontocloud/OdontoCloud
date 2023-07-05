@@ -31,7 +31,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult PostFornecedor([FromBody] FornecedorWriteDTO fornecedorWriteDTO)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             Fornecedor fornecedor = _mapper.Map<Fornecedor>(fornecedorWriteDTO);
 
@@ -49,7 +49,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<FornecedorReadDTO> GetFornecedores([FromQuery] int skip = 0, [FromQuery] int take = 20)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             List<Fornecedor> fornecedorList = repository.FindAll();
 
@@ -67,7 +67,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetFornecedorById(int id)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             Fornecedor fornecedor = repository.FindById(id);
 
@@ -90,7 +90,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult PutFornecedor(int id, [FromBody] FornecedorWriteDTO fornecedorWriteDTO)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             Fornecedor fornecedor = repository.FindById(id);
 
@@ -115,7 +115,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult PatchFornecedor(int id, JsonPatchDocument<FornecedorWriteDTO> patch)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             Fornecedor fornecedor = repository.FindById(id);
 
@@ -148,7 +148,7 @@ namespace OdontoCloud.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult DeleteFornecedor(int id)
         {
-            FornecedorRepository repository = new FornecedorRepository(_context);
+            FornecedorRepository repository = new(_context);
 
             Fornecedor fornecedor = repository.FindById(id);
 
