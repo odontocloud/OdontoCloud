@@ -4,6 +4,50 @@
         <name>OdontoCloud.API</name>
     </assembly>
     <members>
+        <member name="M:OdontoCloud.Controllers.AnamneseController.PostAnamnese(OdontoCloud.Infrastructure.DTOs.Anamnese.AnamneseWriteDTO)">
+            <summary>
+            Adiciona uma anamnese ao banco de dados
+            </summary>
+            <param name="anamneseDTO">Objeto com os campos necessarios para criacao de uma anamnese</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso insercao seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AnamneseController.GetAnamneses(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de anamneses do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AnamneseController.GetAnamneseById(System.Int32)">
+            <summary>
+            Retorna uma anamnese do banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de uma anamnese</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a consulta seja feita com sucesso</response>
+            <response code="404">Caso a anamnese nao seja identificado</response>
+        </member>
+        <member name="M:OdontoCloud.Controllers.AnamneseController.PutAnamnese(System.Int32,OdontoCloud.Infrastructure.DTOs.Anamnese.AnamneseWriteDTO)">
+            <summary>
+            Atualiza todos os campos de uma anamnese no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para consulta de uma anamnese</param>
+            <param name="anamneseDTO">Objeto com os campos necessarios para atualizacao de uma anamnese</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualizacao seja feita com sucesso</response>
+            <response code="404">Caso a anamnese a ser atualizado nao seja identificado</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OdontoCloud.Controllers.AnamneseController.PatchAnamnese(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{OdontoCloud.Infrastructure.DTOs.Anamnese.AnamneseWriteDTO})" -->
+        <member name="M:OdontoCloud.Controllers.AnamneseController.DeleteAnamnese(System.Int32)">
+            <summary>
+            Apaga uma anamnese no banco de dados
+            </summary>
+            <param name="id">Campo identificador necessario para apagar uma anamnese</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a delecao seja feita com sucesso</response>
+            <response code="404">Caso a anamnese a ser apagado nao seja identificado</response>	
+        </member>
         <member name="M:OdontoCloud.Controllers.AtendimentoController.PostAtendimento(OdontoCloud.Infrastructure.DTOs.Atendimento.AtendimentoWriteDTO)">
             <summary>
             Adiciona um atendimento ao banco de dados

@@ -63,7 +63,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         public void TestPostFornecedor()
         {
             //Arrange
-            FornecedorController fornecedorController = new FornecedorController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
+            FornecedorController fornecedorController = new(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
             FornecedorWriteDTO fornecedorWriteDTO = _mapper.Map<FornecedorWriteDTO>(Dentinina);
 
             //Act
@@ -96,7 +96,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         public void TestGetFornecedores()
         {
             //Arrange
-            FornecedorController fornecedorController = new FornecedorController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
+            FornecedorController fornecedorController = new(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
             FornecedorWriteDTO fornecedorWriteDTO1 = _mapper.Map<FornecedorWriteDTO>(Dentinina);
             FornecedorWriteDTO fornecedorWriteDTO2 = _mapper.Map<FornecedorWriteDTO>(DentPlus);
 
@@ -119,7 +119,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         public void TestPutFornecedor()
         {
             //Arrange
-            FornecedorController fornecedorController = new FornecedorController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
+            FornecedorController fornecedorController = new(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
             FornecedorWriteDTO fornecedorWriteDTO = _mapper.Map<FornecedorWriteDTO>(Dentinina);
 
             //Act
@@ -161,7 +161,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         public void TestPatchFornecedor()
         {
             //Arrange
-            FornecedorController fornecedorController = new FornecedorController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
+            FornecedorController fornecedorController = new(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
             FornecedorWriteDTO fornecedorWriteDTO = _mapper.Map<FornecedorWriteDTO>(Dentinina);
 
             //Act
@@ -205,7 +205,7 @@ namespace OdontoCloud.InfrastructureTests.Controller
         public void TestDeleteFornecedor()
         {
             //Arrange
-            FornecedorController fornecedorController = new FornecedorController(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
+            FornecedorController fornecedorController = new(OdontoCloudTestUtil.GetDbContextInMemory(), _mapper);
             FornecedorWriteDTO fornecedorWriteDTO = _mapper.Map<FornecedorWriteDTO>(Dentinina);
 
             //Act
